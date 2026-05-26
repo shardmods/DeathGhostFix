@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "totemghostfix",
+  "version": "${version}",
+  "name": "TotemGhostFix",
+  "description": "Fixes same-tick main-hand totem ghosting by deferring only the final death decision until the end of the server tick.",
+  "authors": ["lyosha"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["sh.lyosha.totemghostfix.TotemGhostFixMod"]
+  },
+  "mixins": [
+    "totemghostfix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18",
+    "minecraft": "1.21.x",
+    "fabric-lifecycle-events-v1": "*"
+  }
+}

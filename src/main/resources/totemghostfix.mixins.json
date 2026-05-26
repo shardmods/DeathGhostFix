@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "sh.lyosha.totemghostfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LivingEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
