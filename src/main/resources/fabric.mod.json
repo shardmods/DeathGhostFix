@@ -6,7 +6,7 @@
   "description": "Fixes same-tick death ghosting by reconciling late same-tick heals and totems before finalizing player death.",
   "authors": ["lyosha"],
   "license": "MIT",
-  "environment": "*",
+  "environment": "server",
   "entrypoints": {
     "main": ["sh.lyosha.deathghostfix.DeathGhostFixMod"]
   },
