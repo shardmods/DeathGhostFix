@@ -1,7 +1,16 @@
 # DeathGhostFix
 
-DeathGhostFix is a Fabric server-side mod that reduces same-tick death ghosting.
+DeathGhostFix reduces same-tick death ghosting by delaying final death decisions until the end of the server tick. Without DeathGhostFix, lethal damage can be finalized before same-tick survival actions like Instant Health splash potions or last-moment totem swaps are processed.
 
-Damage still applies immediately, but if it would be lethal, the mod delays only the final death decision until the end of the same server tick. If healing or a totem saves the player before tick end, death is canceled; otherwise the player dies from the original damage source.
+## Installation
 
-This helps with cases like Instant Health splash potions or last-moment totem swaps being processed in the same tick as lethal damage, but after the damage event in server order.
+Install on the server. A client-only install on multiplayer servers will not affect server-authoritative damage, healing, or totem behavior.
+
+## Versions
+
+- `1.21.11`: Minecraft Java 1.21.11
+- `26.1.x`: Minecraft Java 26.1 through 26.1.2
+
+## License
+
+Unlicense
