@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "sh.lyosha.totemghostfix.mixin",
+  "package": "sh.lyosha.deathghostfix.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "LivingEntityMixin"

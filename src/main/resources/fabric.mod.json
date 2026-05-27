@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "totemghostfix",
+  "id": "deathghostfix",
   "version": "${version}",
-  "name": "TotemGhostFix",
-  "description": "Fixes same-tick main-hand totem ghosting by deferring only the final death decision until the end of the server tick.",
+  "name": "DeathGhostFix",
+  "description": "Fixes same-tick death ghosting by reconciling late same-tick heals and totems before finalizing player death.",
   "authors": ["lyosha"],
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": ["sh.lyosha.totemghostfix.TotemGhostFixMod"]
+    "main": ["sh.lyosha.deathghostfix.DeathGhostFixMod"]
   },
   "mixins": [
-    "totemghostfix.mixins.json"
+    "deathghostfix.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.18",

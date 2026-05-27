@@ -15,7 +15,7 @@ dependencies {
 }
 
 base {
-    archivesName = "TotemGhostFix"
+    archivesName = "DeathGhostFix"
 }
 
 java {

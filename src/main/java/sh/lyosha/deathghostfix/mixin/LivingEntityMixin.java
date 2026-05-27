@@ -1,4 +1,4 @@
-package sh.lyosha.totemghostfix.mixin;
+package sh.lyosha.deathghostfix.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.server.level.ServerLevel;
@@ -7,7 +7,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import sh.lyosha.totemghostfix.PendingTotemDeaths;
+import sh.lyosha.deathghostfix.PendingDeaths;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
@@ -19,7 +19,7 @@ public abstract class LivingEntityMixin {
             target = "Lnet/minecraft/world/entity/LivingEntity;checkTotemDeathProtection(Lnet/minecraft/world/damagesource/DamageSource;)Z"
         )
     )
-    private boolean totemghostfix$deferPlayerDeath(
+    private boolean deathghostfix$deferPlayerDeath(
             boolean original,
             ServerLevel serverLevel,
             DamageSource damageSource,
@@ -29,6 +29,6 @@ public abstract class LivingEntityMixin {
         }
 
         LivingEntity self = (LivingEntity)(Object)this;
-        return self instanceof ServerPlayer player && PendingTotemDeaths.defer(player, damageSource);
+        return self instanceof ServerPlayer player && PendingDeaths.defer(player, damageSource);
     }
 }

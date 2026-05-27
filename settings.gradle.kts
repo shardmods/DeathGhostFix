@@ -6,4 +6,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "totemghostfix"
+rootProject.name = "deathghostfix"
