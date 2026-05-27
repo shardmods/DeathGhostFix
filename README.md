@@ -6,6 +6,12 @@ DeathGhostFix reduces same-tick death ghosting by delaying final death decisions
 
 Install on the server. A client-only install on multiplayer servers will not affect server-authoritative damage, healing, or totem behavior.
 
+## Behavior
+
+- Delays final death decisions until the end of the same server tick.
+- Allows same-tick healing or totem activation to cancel a pending death.
+- Still applies damage immediately and preserves the original damage source if death finalizes.
+
 ## Versions
 
 - `1.21.11`: Minecraft Java 1.21.11
